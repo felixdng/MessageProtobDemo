@@ -8,7 +8,7 @@ using namespace std;
 class MessageBase
 {
 public:
-    virtual bool encode(const string&, unsigned int, const void *) = 0;
+    //virtual bool encode(const string&, unsigned int, const void *) = 0;
     virtual bool decode(const unsigned char *) = 0;
     virtual bool isEnoughDecode(const unsigned char *, size_t) = 0;
     virtual bool protobEncode(const void *, string &) = 0;
@@ -16,7 +16,7 @@ public:
 
     //message types
     enum {
-        TypeConnect = 0xf0010001,
+        TESTTOOL_CONNECTION = 0x6000F001,
         //...
     };
 
@@ -31,7 +31,7 @@ protected:
         SNByteSize        = 4,
         LengthByteSize    = 2,
         Adler32ByteSize   = 8,
-        UdpGroupByteSize  = 4,
+        UpdGroupByteSize  = 4,
         RespCodeByteSize  = 2,
     };
 

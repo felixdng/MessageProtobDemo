@@ -1,5 +1,5 @@
-#ifndef CLIENTMESSAGE_H
-#define CLIENTMESSAGE_H
+#ifndef MESSAGECLIENT_H
+#define MESSAGECLIENT_H
 
 #include <string>
 #include "messagebase.h"
@@ -9,7 +9,7 @@ using namespace std;
 class MessageClient : public MessageBase
 {
 public:
-    bool encode(const string &session_id, unsigned int msg_type, const void *buff) override;
+    bool encode(const string &session_id, unsigned int msg_type, const void *buff);
     bool decode(const unsigned char *buff) override;
     bool isEnoughDecode(const unsigned char *buff, size_t size) override;
 
@@ -46,4 +46,4 @@ protected:
     size_t _EncodeBufferSize;
 };
 
-#endif // CLIENTMESSAGE_H
+#endif // MESSAGECLIENT_H
