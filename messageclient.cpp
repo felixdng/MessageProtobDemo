@@ -57,7 +57,7 @@ bool MessageClient::encode(const string &session_id, unsigned int msg_type, cons
     //msgtype
     _MsgType = msg_type;
     unsigned char msgTypeBytes[MsgTypeByteSize];
-    int2bytes(msg_type, msgTypeBytes);
+    int2bytes(_MsgType, msgTypeBytes);
     for (int i = 0; i < MsgTypeByteSize; ++i)
         _EncodeBuffer[SessionIDByteSize+i] = msgTypeBytes[i];
 

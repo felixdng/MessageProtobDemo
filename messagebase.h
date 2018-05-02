@@ -16,7 +16,7 @@ public:
 
     //message types
     enum {
-        TESTTOOL_CONNECTION = 0x6000F001,
+        TestToolConnection = 0x6000F001,
         //...
     };
 
